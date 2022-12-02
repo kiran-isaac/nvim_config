@@ -1,8 +1,8 @@
 :set number
 :set relativenumber
 :set autoindent
-:set tabstop=4
-:set shiftwidth=4
+:set tabstop=2
+:set shiftwidth=2
 :set smarttab
 :set softtabstop=4
 :set mouse=a
@@ -22,11 +22,13 @@ Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
-Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'nvim-lua/completion-nvim'
 Plug 'github/copilot.vim'
+Plug 'justinmk/vim-sneak'
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 
 set encoding=UTF-8
 
@@ -38,6 +40,9 @@ nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
+
+
+nnoremap <silent> ca <cmd>lua vim.lsp.buf.code_action()<CR>
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -55,4 +60,18 @@ imap <s-tab> <Plug>(completion_smart_s_tab)
 
 nmap <F8> :TagbarToggle<CR>
 
+let g:sneak#label = 1
+nmap f <Plug>Sneak_s
+nmap F <Plug>Sneak_S
+
 :colorscheme jellybeans
+
+
+tnoremap <Esc> <C-\><C-n>
+" move lines up or down, in visual or normal mode
+xnoremap <A-Up>  :m-2<CR>gv=gv
+xnoremap <A-Down> :m'>+<CR>gv=gv
+nnoremap <A-Up>  :<C-u>m-2<CR>==
+nnoremap <A-Down> :<C-u>m+<CR>==
+
+source $HOME/.config/nvim/coc.vim
