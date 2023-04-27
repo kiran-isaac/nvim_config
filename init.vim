@@ -28,7 +28,7 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'github/copilot.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 set encoding=UTF-8
 
