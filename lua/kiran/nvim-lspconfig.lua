@@ -1,6 +1,8 @@
 lspconfig = require('lspconfig')
 completion_callback = require('completion').on_attach
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -43,9 +45,24 @@ local lsp_flags = {
 }
 lspconfig['hls'].setup{
     on_attach = on_attach,
-    flags = lsp_flags,
+    flags = lsp_flags
 }
 lspconfig['clangd'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
+}
+lspconfig["gopls"].setup{
+	cmd = {'gopls'},
+	-- for postfix snippets and analyzers
+	capabilities = capabilities,
+	    settings = {
+	      gopls = {
+		      experimentalPostfixCompletions = true,
+		      analyses = {
+		        unusedparams = true,
+		        shadow = true,
+		     },
+		    },
+	    },
+	on_attach = on_attach,
 }

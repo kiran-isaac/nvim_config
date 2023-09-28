@@ -8,7 +8,8 @@
 :set mouse=a
 
 call plug#begin()
-
+Plug 'pocco81/auto-save.nvim' " Auto Save
+Plug 'sebdah/vim-delve' 
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
@@ -22,13 +23,12 @@ Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
-Plug 'nvim-lua/completion-nvim'
 Plug 'github/copilot.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 set encoding=UTF-8
 
@@ -73,5 +73,3 @@ xnoremap <A-Up>  :m-2<CR>gv=gv
 xnoremap <A-Down> :m'>+<CR>gv=gv
 nnoremap <A-Up>  :<C-u>m-2<CR>==
 nnoremap <A-Down> :<C-u>m+<CR>==
-
-source $HOME/.config/nvim/coc.vim
