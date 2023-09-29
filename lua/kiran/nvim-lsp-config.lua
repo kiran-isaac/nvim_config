@@ -8,3 +8,5 @@ lspconfig['pylsp'].setup({
 lspconfig.gopls.setup({
 	capabilities = capabilities
 })
+
+require('pest-vim').setup {}

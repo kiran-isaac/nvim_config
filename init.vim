@@ -25,10 +25,8 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
-
+" Lsp
 Plug 'neovim/nvim-lspconfig'
-Plug 'simrat39/rust-tools.nvim'
-Plug 'crispgm/nvim-go'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'williamboman/mason.nvim'    
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -37,11 +35,18 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'puremourning/vimspector'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
+
+Plug 'puremourning/vimspector'
+
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'windwp/nvim-autopairs'
+
+" Language specific
+Plug 'simrat39/rust-tools.nvim'
+Plug 'crispgm/nvim-go'
+Plug 'pest-parser/pest.vim'
 
 call plug#end()
 

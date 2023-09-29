@@ -8,7 +8,6 @@ require('kiran.rt')
 require('kiran.treesitter')
 require('kiran.opts')
 require('kiran.keys')
+require('kiran.language-specific')
 
--- setup nvim-go
-require('go').setup({})
 require("nvim-autopairs").setup({})
