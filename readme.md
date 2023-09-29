@@ -13,7 +13,7 @@ r   : rename
 R   : refresh
 
 ### Vimspector
-<F1>    : Toggle Breakpoint
+<F6>    : Toggle Breakpoint
 <F5>    : Launch
 <F8>    : Reset
 <F9>    : Step Over
