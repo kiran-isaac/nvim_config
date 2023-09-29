@@ -28,6 +28,8 @@ Plug 'nvim-tree/nvim-web-devicons'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'simrat39/rust-tools.nvim'
+Plug 'crispgm/nvim-go'
+Plug 'nvim-lua/plenary.nvim'
 Plug 'williamboman/mason.nvim'    
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'

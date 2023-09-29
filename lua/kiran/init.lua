@@ -8,3 +8,6 @@ require('kiran.rt')
 require('kiran.treesitter')
 require('kiran.opts')
 require('kiran.keys')
+
+-- setup nvim-go
+require('go').setup({})
