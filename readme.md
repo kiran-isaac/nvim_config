@@ -8,6 +8,14 @@ A-c : close
 
 ### Nerd Tree
 C-T : Toggle
-m   : open file menu (create, delete, move etc)
+I   : Show hidden files
+r   : rename
+R   : refresh
 
-
+### Vimspector
+<F1>    : Toggle Breakpoint
+<F5>    : Launch
+<F8>    : Reset
+<F9>    : Step Over
+<F10>   : Step Into
+<F12>   : Step Out

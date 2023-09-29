@@ -8,39 +8,43 @@
 :set mouse=a
 
 call plug#begin()
+
 Plug 'pocco81/auto-save.nvim' " Auto Save
 Plug 'sebdah/vim-delve' 
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
-Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-tree/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'github/copilot.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
-set encoding=UTF-8
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-tree/nvim-web-devicons'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'simrat39/rust-tools.nvim'
+Plug 'williamboman/mason.nvim'    
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'puremourning/vimspector'
 
 call plug#end()
 
+set encoding=UTF-8
+
 lua require('kiran')
 
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
-
+nnoremap <C-t> :NvimTreeToggle<CR>
 
 nnoremap <silent> ca <cmd>lua vim.lsp.buf.code_action()<CR>
 
@@ -54,10 +58,6 @@ set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
 
-let g:completion_enable_auto_popup = 0
-imap <tab> <Plug>(completion_smart_tab)
-imap <s-tab> <Plug>(completion_smart_s_tab)
-
 nmap <F8> :TagbarToggle<CR>
 
 let g:sneak#label = 1
@@ -65,7 +65,6 @@ nmap f <Plug>Sneak_s
 nmap F <Plug>Sneak_S
 
 :colorscheme jellybeans
-
 
 tnoremap <Esc> <C-\><C-n>
 " move lines up or down, in visual or normal mode
