@@ -39,6 +39,9 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'puremourning/vimspector'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'windwp/nvim-autopairs'
 
 call plug#end()
 

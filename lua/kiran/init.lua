@@ -11,3 +11,4 @@ require('kiran.keys')
 
 -- setup nvim-go
 require('go').setup({})
+require("nvim-autopairs").setup({})

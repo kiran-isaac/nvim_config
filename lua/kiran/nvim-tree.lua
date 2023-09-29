@@ -13,7 +13,11 @@ require("nvim-tree").setup({
   },
   renderer = {
     group_empty = true,
+		highlight_git = true,
   },
+	git = {
+		enable = true,
+	},
   filters = {
     dotfiles = false,
   },
