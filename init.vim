@@ -80,3 +80,5 @@ xnoremap <A-Up>  :m-2<CR>gv=gv
 xnoremap <A-Down> :m'>+<CR>gv=gv
 nnoremap <A-Up>  :<C-u>m-2<CR>==
 nnoremap <A-Down> :<C-u>m+<CR>==
+
+let g:airline_powerline_fonts = 1
