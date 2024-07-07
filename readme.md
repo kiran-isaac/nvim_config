@@ -1,4 +1,28 @@
 # Basic Editor Commands
+## navigation
+C-G : displays your location in a file and the file status
+G   : move to end of file
+#G  : move to line number
+gg  : move to the first line
+
+H   : move cursor to the top screen
+M   : move cursor to the middle of the screen
+L   : move cursor to the bottom of the screen
+
+w   : move to the start of the next word
+W   : move to the start of the next word (including punctuation)
+e   : jump forward to the end of a word
+E   : ...
+b   : back to start of word
+B   : ...
+ge  : back to end of word
+gE  : ...
+
+
+%   : go to matching paren
+:s/old/new      : substitute next
+:s/old/new/g    : substitute in line
+
 ## text editing
 r   : replace a single character (and return to command mode)
 cc  : replace an entire line (deletes the line and moves into insert mode)
