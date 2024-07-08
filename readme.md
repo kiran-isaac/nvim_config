@@ -11,6 +11,9 @@ u   : undo
 C-r : redo
 .   : repeat last command
 
+## Moving
+
+
 ## Window Management
 (all preceded by C-W)
 s   : new horizontal split
