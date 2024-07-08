@@ -20,6 +20,7 @@ ge  : back to end of word
 gE  : ...
 {   : jump to next paragraph (or function/block)
 }   : ...
+%   : go to matching paren
 
 zz  : center screen around cursor
 zt  : position screen so cursor is at top
@@ -39,12 +40,14 @@ Tx  : go to after previous occurence
 ;   : previous find movement again
 ,   : previous find movement again backwards
 
-=======
-
-
-%   : go to matching paren
 :s/old/new      : substitute next
-:s/old/new/g    : substitute in line
+:.,+2s/old/new  : change in current line, and +2 lines
+:%s/foo/bar/g   : change in all lines
+/[flags]  : substitute with flags
+    - g             : in line
+    - i             : case insensitive
+    - I             : case sensitive
+    - c             : ask for confirmation
 
 ## text editing
 i   : insert before cursor
