@@ -38,8 +38,6 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 
-Plug 'puremourning/vimspector'
-
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'windwp/nvim-autopairs'
 

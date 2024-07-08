@@ -39,6 +39,10 @@ Tx  : go to after previous occurence
 ;   : previous find movement again
 ,   : previous find movement again backwards
 
+=======
+
+
+%   : go to matching paren
 :s/old/new      : substitute next
 :s/old/new/g    : substitute in line
 
@@ -61,6 +65,9 @@ gJ  : merge the line below to the current one with no space in between them
 u   : undo
 C-r : redo
 .   : repeat last command
+
+## Moving
+
 
 ## Window Management
 (all preceded by C-W)
