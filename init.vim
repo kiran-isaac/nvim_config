@@ -11,13 +11,13 @@ call plug#begin()
 
 Plug 'pocco81/auto-save.nvim' " Auto Save
 Plug 'sebdah/vim-delve' 
-Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
-Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
-Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
-Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
-Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
+Plug 'tpope/vim-surround' " Surrounding ysw)
+Plug 'tpope/vim-commentary' " For Commenting gcc & gc
+Plug 'vim-airline/vim-airline' " Status bar
+Plug 'lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
+Plug 'ap/vim-css-color' " CSS Color Preview
+Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
+Plug 'tc50cal/vim-terminal' " Vim Terminal
 Plug 'romgrk/barbar.nvim'
 Plug 'github/copilot.vim'
 Plug 'justinmk/vim-sneak'
@@ -25,6 +25,7 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
+
 " Lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
@@ -45,6 +46,10 @@ Plug 'windwp/nvim-autopairs'
 Plug 'simrat39/rust-tools.nvim'
 Plug 'crispgm/nvim-go'
 Plug 'pest-parser/pest.vim'
+
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'rhysd/conflict-marker.vim'
 
 call plug#end()
 
