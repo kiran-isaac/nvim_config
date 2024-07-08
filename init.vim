@@ -80,3 +80,5 @@ nnoremap <A-Up>  :<C-u>m-2<CR>==
 nnoremap <A-Down> :<C-u>m+<CR>==
 
 let g:airline_powerline_fonts = 1
+
+:n ~/.config/nvim/readme.md
