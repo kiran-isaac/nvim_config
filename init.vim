@@ -43,9 +43,9 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'windwp/nvim-autopairs'
 
 " Language specific
-Plug 'simrat39/rust-tools.nvim'
+Plug 'mrcjkb/rustaceanvim'
 Plug 'crispgm/nvim-go'
-Plug 'pest-parser/pest.vim'
+" Plug 'pest-parser/pest.vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -57,7 +57,8 @@ set encoding=UTF-8
 
 lua require('kiran')
 
-nnoremap <C-t> :NvimTreeToggle<CR>
+nnoremap <C-T> :NvimTreeToggle<CR>
+nnoremap <C-t>cd :cd %:p:h<CR>:pwd<CR>
 
 nnoremap <silent> ca <cmd>lua vim.lsp.buf.code_action()<CR>
 
@@ -86,4 +87,4 @@ nnoremap <A-Down> :<C-u>m+<CR>==
 
 let g:airline_powerline_fonts = 1
 
-:n ~/.config/nvim/readme.md
+command! Khelp :tabnew ~/.config/nvim/readme.md
