@@ -1,15 +1,11 @@
--- Treesitter Plugin Setup 
-require('nvim-treesitter.configs').setup {
-  ensure_installed = { "lua", "rust", "toml" },
-  auto_install = true,
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting=false,
-  },
-  ident = { enable = true }, 
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-    max_file_lines = nil,
-  }
-}
+require("nvim-autopairs").setup({})
+-- Treesitter Plugin Setup (nvim-treesitter `main` branch API)
+require('nvim-treesitter').install { "lua", "rust", "toml" }
+
+-- Highlighting is provided by Neovim itself; start it for any filetype
+-- that has a parser installed (pcall skips filetypes without one).
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function(args)
+    pcall(vim.treesitter.start, args.buf)
+  end,
+})
